@@ -1,3 +1,10 @@
+#!/usr/bin/python3
+
+# -*- coding: utf-8 -*-
+
+from __future__ import print_function
+from __future__ import unicode_literals
+
 import jira
 import requests
 import pandas as pd
@@ -93,10 +100,9 @@ def hehe():
            comm3.append(co3)
 
     df_comm3 = pd.DataFrame(comm3, columns=['identity', 'comments', 'summary'])
-    print(" ")
-    print("df_cmm3")
-    print(df_comm3)
-    print(" ")
+
+    #print("df_cmm3")
+    #print(df_comm3)
 
     co4=[]
     comm4=[]
@@ -148,10 +154,9 @@ def hehe():
         if(ale_df.shape[0]>0):
             print("create case for alert here")
             value=ale_df['id']
-            val=value.to_string(index=False)
-            val1=val.strip()
-            print("val1 ID  from ale_df")
-            print(val1)
+            val1=value.to_string(index=False).strip()
+            #print("val1 ID  from ale_df")
+            #print(val1)
 
             response_create_case=requests.post("http://172.17.0.5:9000/api/alert/{}/createCase".format(val1),
                     auth=HTTPBasicAuth('theuser', '***'))
@@ -167,10 +172,8 @@ def hehe():
                     auth=HTTPBasicAuth('theuser', '***'), data=new_json_task)
 
             new_repopo=response_create_new_task.json()
-
             new_df_task_id=new_repopo['id']
-            print("/opt/{}".format(new_df_task_id))
-
+         
             #here to create temporary table
          
             didi = pd.DataFrame({'id':[id_case_readable], 'taskID':[new_df_task_id]})
@@ -194,8 +197,8 @@ def hehe():
         if(ale_df3.shape[0]>0):
             print("we have an alert with a case")
             print("check in temporary table if case ID coresponding to alert ID has a task ID")
-            #print("for alert ID " + df_alert['id'] + "there is case ID " + df_case['id'])
-            print("case ID for which I search")
+            print("for alert ID " + df_alert['id'] + "there is case ID " + df_case['id'])
+            #print("case ID for which I search")
        
             caseID_program=ale_df3['id'].to_string(index=False).strip()
             print(type(caseID_program))
@@ -239,8 +242,7 @@ def hehe():
 
                 response_create_case=requests.post("http://172.17.0.5:9000/api/alert/{}/createCase".format(val21),
                     auth=HTTPBasicAuth('theuser', '***'))
-                #print("response creation")
-                #print(response_create_case)
+
                 data_create_case2=response_create_case.json()
                 #print(data_create_case2)
                 id_case_readable2=data_create_case2['id']
