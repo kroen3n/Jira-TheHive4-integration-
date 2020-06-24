@@ -19,6 +19,6 @@ This environment on containers look as following:
 
 
 >> A step-by-step tutorial will be done under the German documentation folder, 
-including the automation part in code to build entire environment on containers
+including the automation part in code for building up the entire environment on containers
 
 
