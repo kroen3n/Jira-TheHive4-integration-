@@ -77,6 +77,7 @@ and the alert preview, along with the file attachment
 3) Comments replication  -- this only happens if existing alerts in TheHive4 have been replicated from Jira tickets
 
 - add Jira comment in previously created ticket (the one with machine learning meme attachment)
+![alt text](https://raw.githubusercontent.com/kroen3n/Jira-TheHive4-integration-/master/pics/1st.png)
 
 - On TheHive4 side, alert is turned into case. 
 ![alt text](https://raw.githubusercontent.com/kroen3n/Jira-TheHive4-integration-/master/pics/alert_turns_to_case.png)
@@ -101,7 +102,7 @@ add logs to new task
 ```
 
 Add another comment in Jira ticket
-
+![alt text](https://raw.githubusercontent.com/kroen3n/Jira-TheHive4-integration-/master/pics/2nd.png)
 
 
 On TheHive4 side:
