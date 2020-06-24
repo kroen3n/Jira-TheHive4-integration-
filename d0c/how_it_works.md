@@ -1,6 +1,6 @@
 
 <i> A step-by-step tutorial will be done under the German documentation folder, 
-       including the automation part in code to build entire environment on containers </i>
+       including the automation part (in code) for building up the entire environment on containers </i>
 
 
 Flask services running on following ports:
