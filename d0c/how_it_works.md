@@ -43,6 +43,11 @@ In Jira, webhook for service Flask 2 will be setup as following:
 
 1) Create Alert without attachment in Jira - you should see replication in TheHive4
 
+- On jira side, ticket creation
+
+![alt text](https://raw.githubusercontent.com/kroen3n/Jira-TheHive4-integration-/master/pics/wtf.png)
+
+- On TheHive4 side, data replication in an alert
 
 
 
