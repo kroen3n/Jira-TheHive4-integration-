@@ -43,13 +43,28 @@ In Jira, webhook for service Flask 2 will be setup as following:
 
 1) Create Alert without attachment in Jira - you should see replication in TheHive4
 
-- On jira side, ticket creation
+- On Jira side, ticket creation
 
 ![alt text](https://raw.githubusercontent.com/kroen3n/Jira-TheHive4-integration-/master/pics/wtf.png)
 
 - On TheHive4 side, data replication in an alert
 
+![alt text](https://raw.githubusercontent.com/kroen3n/Jira-TheHive4-integration-/master/pics/alert_thehive4_without_attachment.png)
 
+
+and the preview of newly created alert
+![alt text](https://raw.githubusercontent.com/kroen3n/Jira-TheHive4-integration-/master/pics/alert_without_attachment_preview.png)
+
+
+</br>
+
+2) Create Alert with attachment in Jira - you should see data replication in TheHive4
+
+- On Jira side, ticket creation with attachment
+
+![alt text](https://raw.githubusercontent.com/kroen3n/Jira-TheHive4-integration-/master/pics/jira_alert_with_attachment.png)
+
+-
 
 What you see in Flask logs when turning alert into case, and adding first log to "Jira comments" task:
 ```
@@ -68,19 +83,21 @@ What you should see in Flask logs when adding another comment into Jira (comment
 ```
 we have an alert with a case
 check in temporary table if case ID coresponding to alert ID has a task ID
-case ID for which I search
+
 read table
          id    taskID
 0  82120784  41275416
 1  82112608  82116704
 2  41156840  41283752
 3    200944  82149472
+
 ...... adding jira comment as log...
+
 {'_id': '41316520', 'id': '41316520', 'createdBy': 'theuser@thehive.local', 'createdAt': 1593019865691, '_type': 'case_task_log', 'message': 'another comment about ML memes', 'startDate': 1593019865691, 'status': 'Ok', 'owner': 'theuser@thehive.local'}
 172.17.0.3 - - [24/Jun/2020 17:31:05] "POST /get/comments?user_id=artsy&user_key=JIRAUSER10000 HTTP/1.1" 201 -
 ```
 
-Temporary table is created from a csv file (on which is applied python dataframes):
+Temporary table is created from a csv file. All new entries (case ID and task ID) are saved here ...  (from here on, python dataframes are applied).
 ```
 root@flasck2:/app# more /home/lmao.csv 
 id,taskID
