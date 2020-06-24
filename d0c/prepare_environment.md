@@ -3,11 +3,11 @@
 
 TheHive4 needs systemd - you'll need to access that from a container
 
-Cassandra and HDFS have several Docker images available. If you go with HDFS and local filesystem, make sure you change the port 9000.
+Cassandra and HDFS have several Docker images available. If you go with HDFS and not local filesystem, make sure you change the port 9000.
 
-Flask service can be easily ported to docker containers
+Flask service can be easily ported to docker containers.
 
-The Jira attlassian docker image I have used for this is at following repository: https://github.com/cptactionhank/docker-atlassian-jira
+The Jira attlassian docker image I have used: https://github.com/cptactionhank/docker-atlassian-jira
 
 This environment on containers look as following:
 ```
