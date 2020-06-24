@@ -71,6 +71,19 @@ and the alert preview, along with the file attachment
 ![alt text](https://raw.githubusercontent.com/kroen3n/Jira-TheHive4-integration-/master/pics/thehive4_attachment_preview.png) 
 
 
+3) Comments replication  -- this only happens if existing alerts in TheHive4 have been replicated from Jira tickets
+
+- add Jira comment in previously created ticket (the one with machine learning meme attachment)
+
+- On TheHive4 side, alert is turned into case. 
+![alt text](https://raw.githubusercontent.com/kroen3n/Jira-TheHive4-integration-/master/pics/alert_turns_to_case.png)
+
+The Jira comments are stored under "Jira comments" task, as logs:
+
+![alt text](https://raw.githubusercontent.com/kroen3n/Jira-TheHive4-integration-/master/pics/created_task.png)
+
+![alt text](https://raw.githubusercontent.com/kroen3n/Jira-TheHive4-integration-/master/pics/task_1st_log.png)
+
 
 What you see in Flask logs when turning alert into case, and adding first log to "Jira comments" task:
 ```
