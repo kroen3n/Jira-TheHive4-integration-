@@ -1,4 +1,7 @@
 
+<i> A step-by-step tutorial will be done under the German documentation folder, 
+       including the automation part in code to build entire environment on containers </i>
+
 
 Flask services running on following ports:
 
@@ -96,6 +99,14 @@ create new task for new case id
 add logs to new task
 {'_id': '41410584', 'id': '41410584', 'createdBy': 'theuser@thehive.local', 'createdAt': 1593019696754, '_type': 'case_task_log', 'message': 'k0mmentz about ML', 'startDate': 1593019696754, 'status': 'Ok', 'owner': 'theuser@thehive.local'}
 ```
+
+Add another comment in Jira ticket
+
+
+
+On TheHive4 side:
+
+![alt text](https://raw.githubusercontent.com/kroen3n/Jira-TheHive4-integration-/master/pics/task_2ndlog.png)
 
 What you should see in Flask logs when adding another comment into Jira (comment to be replicated into TheHive4 as another task log):
 
