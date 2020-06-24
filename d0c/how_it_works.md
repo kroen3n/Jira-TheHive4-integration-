@@ -64,7 +64,13 @@ and the preview of newly created alert
 
 ![alt text](https://raw.githubusercontent.com/kroen3n/Jira-TheHive4-integration-/master/pics/jira_alert_with_attachment.png)
 
--
+- On TheHive4 side, data replication in the alert
+![alt text](https://raw.githubusercontent.com/kroen3n/Jira-TheHive4-integration-/master/pics/thehive4_with_attachment.png)
+
+and the alert preview, along with the file attachment
+![alt text](https://raw.githubusercontent.com/kroen3n/Jira-TheHive4-integration-/master/pics/thehive4_attachment_preview.png) 
+
+
 
 What you see in Flask logs when turning alert into case, and adding first log to "Jira comments" task:
 ```
