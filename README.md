@@ -1,4 +1,4 @@
-<b> C0de flow for it can do, for now... </b>
+<b> C0de flow for waht it can do, for na0... </b>
 
 
 >> Create new alert (attachment or no attachment design)
