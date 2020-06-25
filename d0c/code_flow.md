@@ -7,4 +7,4 @@
 
 >> Add comment (no attachment design)
 
-![alt text](https://raw.githubusercontent.com/kroen3n/Jira-TheHive4-integration-/master/pics/codeflow2.png)
+![alt text](https://raw.githubusercontent.com/kroen3n/Jira-TheHive4-integration-/master/pics/codeflow3.png)
