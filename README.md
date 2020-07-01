@@ -1,4 +1,4 @@
-<b> Kurzbeschreib des Code Designs   </b>
+<b> Kurzbeschreib des Code Designs  [noch nicht abgeschlossen]</b>
 
 
 >> Neue Alert erstellen (Anhang oder kein Anhang Design)
