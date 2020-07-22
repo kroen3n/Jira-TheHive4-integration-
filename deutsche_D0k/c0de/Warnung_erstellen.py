@@ -30,9 +30,11 @@ import uuid
 from thehive4py.api import TheHiveApi
 from thehive4py.models import Alert, AlertArtifact, CustomFieldHelper
 
+
+# bei TheHive4 anmelden
 api = TheHiveApi('http://172.17.0.5:9000', '**')
 
-
+# bei Jira anmelden
 username="artsy"
 password="**"
 jira=JIRA('http://172.17.0.3:8080', basic_auth=(username, password))
@@ -60,7 +62,7 @@ ress = response.json()
 
 open_issue=jira.search_issues('project=\"soc\" ',  fields='comment, attachment', json_result=True)
 
-
+# bei der Datenbank anmelden
 connection_dba = pymysql.connect(host='172.17.0.7',
         user='root',
         password='**',
@@ -160,7 +162,8 @@ def create_tickets():
             new_content = newreq['issue']['fields']['attachment'][j]['content']
             repl_content=re.sub('localhost', '172.17.0.3', new_content)
             name_attachment = newreq['issue']['fields']['attachment'][j]['filename']
-            subprocess.call(["curl", "-u", "artsy:abc123",  "{}".format(repl_content), "--output", "{}".format(name_attachment)], shell = False)
+        
+            subprocess.call(["curl", "-u", "artsy:**",  "{}".format(repl_content), "--output", "{}".format(name_attachment)], shell = False)
     
             ki = {'ki': name_attachment, 'summary':new_summary}
             print(ki)
