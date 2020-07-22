@@ -27,6 +27,8 @@ import uuid
 from thehive4py.api import TheHiveApi
 from thehive4py.models import Alert, AlertArtifact, CustomFieldHelper
 
+#unsere Pyth0n Module als Skript aufrufen
+
 from script_cred import UserTheHive
 from script_cred import UserJira
 from script_cred import UserDBA
