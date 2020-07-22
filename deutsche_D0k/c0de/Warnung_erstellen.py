@@ -71,6 +71,7 @@ engine=create_engine(db_data)
 
 get_it=connection_dba.cursor()
 
+chici=[]
 
 @app.route("/created/tasks", methods=['POST'])
 
@@ -172,7 +173,7 @@ def create_tickets():
             ]
 
         for jj in range(df_chi.shape[0]):
-                #print("here are all...")
+             
                 #print(df_chi['ki'][jj])
 
                 addedartifacts = AlertArtifact(dataType='file', data='{}'.format(df_chi['ki'][jj]))
