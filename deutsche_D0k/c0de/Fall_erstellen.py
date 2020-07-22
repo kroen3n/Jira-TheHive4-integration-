@@ -32,20 +32,19 @@ from thehive4py.api import TheHiveApi
 from thehive4py.models import Alert, AlertArtifact, CustomFieldHelper
 
 
-# access to TheHive4
+# bei TheHive4 anmelden
 api = TheHiveApi('http://172.17.0.5:9000', '**')
 
 
-
-# access to Jira
+# bei Jira anmelden 
 username="artsy"
 password="**"
 jira=JIRA('http://172.17.0.3:8080', basic_auth=(username, password))
 response = requests.get("http://172.17.0.3:8080/rest/api/2/search?jql=project=SOC", auth=(username, password))
 jj=response.json()
 
-#access to dba
 
+# bei der Datenbank anmelden
 connection_dba = pymysql.connect(host='172.17.0.7',
                                  user='root',
                                  password='**',
