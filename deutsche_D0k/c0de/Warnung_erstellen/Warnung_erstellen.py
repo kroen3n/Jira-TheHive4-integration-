@@ -5,10 +5,8 @@
 from __future__ import print_function
 from __future__ import unicode_literals
 
-import jira
-import requests
+
 import pandas as pd
-from jira.client import JIRA
 import json
 from flask import request, jsonify
 import subprocess, os
@@ -18,7 +16,6 @@ from requests.auth import HTTPBasicAuth
 from pandas import json_normalize
 
 from flask import Flask
-
 
 import requests
 import sys
@@ -45,20 +42,12 @@ from script_cred import DBA
 
 from mysql_login import ConnectMySQL
 
+from jira_login import JiraLogin
+
 
 
 # bei TheHive4 anmelden
 api = TheHiveApi('http://{}:9000'.format(HostTheHive.hostname), '*** deine API ***')
-
-
-# bei Jira anmelden 
-username=UserJira.name
-password=PasswdJira.secret
-
-jira=JIRA('http://{}:8080'.format(HostJira.hostname), basic_auth=(username, password))
-
-response = requests.get("http://{}:8080/rest/api/2/search?jql=project=SOC".format(HostJira.hostname), auth=(username, password))
-jj=response.json()
 
 
 app=Flask(__name__)
@@ -71,14 +60,16 @@ da=[]
 
 
 ress = response.json()
-open_issue=jira.search_issues('project=\"soc\" ',  fields='comment, attachment', json_result=True)
+open_issue=JiraLogin.jira.search_issues('project=\"soc\" ',  fields='comment, attachment', json_result=True)
 
 
 @app.route("/created/tasks", methods=['POST'])
 
 
 def create_tickets():
+    
     newreq=request.get_json()
+    
     if(len(newreq['issue']['fields']['attachment'])==0):
         print("no attachment in ticket... creating alert with data...")
         new_summary1=newreq['issue']['fields']['summary']
@@ -117,6 +108,7 @@ def create_tickets():
         data_hive4_alert=response_hive4_alert.json()
 
         data_normalize_alert=json_normalize(data=data_hive4_alert)
+        
         print("data normalize alert from hive4")
         print(data_normalize_alert[['id', 'title']])
 
@@ -167,8 +159,8 @@ def create_tickets():
            # AlertArtifact(dataType='file', data='users.csv')
             ]
 
-        for jj in range(df_chi.shape[0]):
-                addedartifacts = AlertArtifact(dataType='file', data='{}'.format(df_chi['ki'][jj]))
+        for JiraLogin.jj in range(df_chi.shape[0]):
+                addedartifacts = AlertArtifact(dataType='file', data='{}'.format(df_chi['ki'][JiraLogin.jj]))
                 artifacts.append(addedartifacts)
 
         print("=====================================")
