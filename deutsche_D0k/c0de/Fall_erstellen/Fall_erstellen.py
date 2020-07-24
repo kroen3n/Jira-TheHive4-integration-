@@ -55,6 +55,7 @@ def hehe():
 
 
         class Update:
+   
             up=request.data
             update_req = json.loads(up)
             df_updated=pd.DataFrame(update_req)
@@ -63,14 +64,18 @@ def hehe():
             updated_comment=df_updated['comment']['body']
             print(updated_comment)
 
+         
         class Link:
+         
             sel = Update.df_updated['comment']['self']
             url_sel = sel.split('/')
             new_url = sel.rsplit("/", 2)[0]
             #print(new_url) 
             updated_url = re.sub('localhost', '{}'.format(HostJira.hostname), new_url)
 
+            
         class Extract:
+         
             take_file = subprocess.call(["curl", "-u", 
                 "{0}:{1}".format(UserJira.name, PasswdJira.secret), 
                 "{}".format(Link.updated_url), "--output", 
@@ -142,6 +147,7 @@ def hehe():
                 print(extract_alert_csv_df)
             
                 title_case = Compare.df_comm3_csv_single_df['summary'].to_string(index=False).strip()
+             
              
             class Alert:
             
