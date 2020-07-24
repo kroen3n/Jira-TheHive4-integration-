@@ -91,12 +91,12 @@ def hehe():
             df_1.to_sql('df_1', ConnectMySQL.engine, if_exists='append', index=False)
      
             df1_mysql = df_1.to_csv("/app/refactoring_code/df_1.csv")
-        
             df1_mysql_q=pd.read_csv("/app/refactoring_code/df_1.csv")
  
             x=df1_mysql_q['id'].to_string(index=False).strip()
             y=df1_mysql_q['comments'].to_string(index=False).strip()
 
+   
         class Merge:
 
             df2_mysql = pd.read_sql('select summary, description from data2 where id = \'{}\''.format(Fields.x), 
@@ -112,14 +112,15 @@ def hehe():
                                "summary" : d11,
                                "description": d22 }, index=[0])
         
+        
         class DfC3:
 
             Merge.df_comm3.to_csv("/app/refactoring_code/df_comm3_single.csv")
-    
             Merge.df_comm3.to_sql('df_comm3', ConnectMySQL.engine, if_exists='append', index=False)
 
             df_comm3_mysql=pd.read_sql('SELECT  * from df_comm3 ', ConnectMySQL.engine).to_csv("/app/refactoring_code/df_comm3.csv")
 
+            
         class Compare:
 
             df_case_csv = pd.read_sql('SELECT * from df_case', ConnectMySQL.engine).to_csv("/app/refactoring_code/df_case.csv")
@@ -203,12 +204,14 @@ def hehe():
                 df_app.to_sql('df_case', ConnectMySQL.engine, if_exists='append', index=False)
                 df_app.to_sql('df_case_logs', ConnectMySQL.engine, if_exists='append', index=False)
 
-
             
         else:
             print("case is already created")
 
+                                                   
         return jsonify({'new_comment': Update.updated_comment}), 201
+                                                   
+                                                   
 if __name__=='__main__':
     app.run(debug=True, host='0.0.0.0', port=5003)
 
