@@ -43,7 +43,7 @@ from script_cred import UserJira
 from script_cred import UserTheHive
 
 
-api = TheHiveApi('http://{}:9000'.format(HostTheHive.hostname), 'EdUS/wCLpgIlJKeM1TCEPV2J8T/izztI')
+api = TheHiveApi('http://{}:9000'.format(HostTheHive.hostname), '***')
  
 app=Flask(__name__)
 tasks=[]
