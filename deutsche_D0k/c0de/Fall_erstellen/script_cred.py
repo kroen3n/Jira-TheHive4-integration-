@@ -5,6 +5,9 @@ import os
 import sys
 
 
+from passwd import Encry
+
+
 class UserDBA:
     name='root'
 
@@ -16,13 +19,13 @@ class UserJira:
 
 
 class PasswdTheHive:
-    secret='***'
+    secret=Encry.pl
 
 class PasswdDBA:
-    secret='***'
+    secret=Encry.pl
 
 class PasswdJira:
-    secret='***'
+    secret=Encry.pl
 
 class HostTheHive:
     hostname="172.17.0.5"
