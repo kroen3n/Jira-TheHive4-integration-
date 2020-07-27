@@ -1,5 +1,5 @@
 
-#Krypt0 
+<b> Verschlüsselung von Passwörtern </b>
 
 In diesem Beispiel ist das Passwort für Jira und MySQL das gleiche (passwd.bin)
 
