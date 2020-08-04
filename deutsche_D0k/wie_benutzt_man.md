@@ -1,7 +1,7 @@
 <i> Wie benutzt man </i>
 
 <br></br>
-Entwurfsmuster
+>>Entwurfsmuster
 
 ![alt text](https://raw.githubusercontent.com/kroen3n/Jira-TheHive4-integration-/master/deutsche_D0k/pics/envir.png)
 
