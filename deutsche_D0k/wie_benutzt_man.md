@@ -10,17 +10,17 @@
 Folgende Ports wurden den Flask-Diensten zugewiesen 
 
 ```
-(base) root@kro3nen:/home/po0lt# # Flask1 fur Aufgaben erstellen
+(base) root@kro3nen:/home/po0lt# # Flask1 für Aufgaben erstellen
 (base) root@kro3nen:/home/po0lt# lsof -i :5002
 COMMAND    PID USER   FD   TYPE DEVICE SIZE/OFF NODE NAME
 docker-pr 6267 root    4u  IPv6  57898      0t0  TCP *:rfe (LISTEN)
 (base) root@kro3nen:/home/po0lt#
-(base) root@kro3nen:/home/po0lt# # Flask2 fur Kommentare
+(base) root@kro3nen:/home/po0lt# # Flask2 für Kommentare
 (base) root@kro3nen:/home/po0lt# lsof -i :5003
 COMMAND     PID USER   FD   TYPE  DEVICE SIZE/OFF NODE NAME
 docker-pr 19944 root    4u  IPv6 1759716      0t0  TCP *:5003 (LISTEN)
 (base) root@kro3nen:/home/po0lt#
-(base) root@kro3nen:/home/po0lt# # Flask3 fur Kommentare hinzufügen
+(base) root@kro3nen:/home/po0lt# # Flask3 für Kommentare hinzufügen
 (base) root@kro3nen:/home/po0lt# lsof -i :5004
 COMMAND     PID USER   FD   TYPE  DEVICE SIZE/OFF NODE NAME
 docker-pr 15175 root    4u  IPv6 2806997      0t0  TCP *:5004 (LISTEN)
