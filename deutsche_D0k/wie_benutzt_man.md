@@ -41,7 +41,8 @@ Die folgenden Webhooks wurden auf der Jira erstellt (jeder Webhook wird aus eine
 ![alt text](https://raw.githubusercontent.com/kroen3n/Jira-TheHive4-integration-/master/deutsche_D0k/pics/Kommentare_hinzufügen.png)
 
 
-Der Datenbank Port wurde nicht offengelegt:
+Die Datenbank kommuniziert nicht mit dem externen Netzwerk. 
+Der MySQL-Container kommuniziert nur auf der Ebene des Docking-Netzwerks.
 
 ```
 (base) root@kro3nen:/home/po0lt# lsof -i :3306
