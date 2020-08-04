@@ -42,7 +42,7 @@ Die folgenden Webhooks wurden auf der Jira erstellt (jeder Webhook wird aus eine
 
 
 Die Datenbank kommuniziert nicht mit dem externen Netzwerk. 
-Der MySQL-Container kommuniziert nur auf der Ebene des Docking-Netzwerks.
+Der MySQL-Container kommuniziert nur auf der Ebene des Docker Netzwerks.
 
 ```
 (base) root@kro3nen:/home/po0lt# lsof -i :3306
