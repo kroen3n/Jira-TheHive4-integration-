@@ -146,16 +146,29 @@ def create_tickets():
 
 
     if(len(newreq['issue']['fields']['attachment']) > 0):
-
+        
+        
         new_summary=newreq['issue']['fields']['summary']
+        
+        ## Erstellen eines temporären Ordners zum Speichern von Jira-Anhängen
+        
+        path=os.getcwd()
+        new_=path+"/{}".format(new_summary)
+        new_folder=os.makedirs(new_)
+
         new_description=newreq['issue']['fields']['description']
+        
+        ## Anhänge im temporären Ordner speichern 
+        
         for j in range(0, len(newreq['issue']['fields']['attachment'])):
             new_content = newreq['issue']['fields']['attachment'][j]['content']
             repl_content=re.sub('localhost', '{}'.format(HostJira.hostname), new_content)
             name_attachment = newreq['issue']['fields']['attachment'][j]['filename']
-            subprocess.call(["curl", "-u", "{0}:{1}".format(UserJira.name, PasswdJira.secret),  "{}".format(repl_content), "--output", "{}".format(name_attachment)], shell = False)
+            subprocess.call(["curl", "-u", "{0}:{1}".format(UserJira.name, PasswdJira.secret),  "{}".format(repl_content), "--output", "{0}/{1}".format(new_, name_attachment)], shell = False)
     
-            ki = {'ki': name_attachment, 'summary':new_summary}
+            na = new_+"/"+name_attachment
+        
+            ki = {'ki': na, 'summary':new_summary}
             print(ki)
 
             chici.append(ki)
@@ -171,6 +184,9 @@ def create_tickets():
 
 
         sourceRef = str(uuid.uuid4())[0:6]
+        
+        ## Anhänge zu Alert hinzufügen
+        
         alert = Alert(title=new_summary,
             tlp=3,
             tags=['lelol'],
@@ -179,7 +195,13 @@ def create_tickets():
             source='mm1',
             sourceRef=sourceRef,
             artifacts=artifacts)
-     
+        
+        id = None
+        response = api.create_alert(alert)
+
+        
+        ## temporären Ordner löschen
+        shutil.rmtree(new_)
 
 
     
