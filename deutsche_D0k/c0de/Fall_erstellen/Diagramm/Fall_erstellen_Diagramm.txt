@@ -1,0 +1,128 @@
+@startuml
+
+class Encry{
+--encrypted--
+passwd.bin
+}
+
+class Update{
+updated_comment
+}
+
+class Link{
+new_url
+}
+
+class Extract{
+..<i> files generated </i>..
+..
+new.json
+}
+
+package dataframes.df_1 <<Database>> {
+class Fields{
+df_1
+df1_mysql
+df1_mysql_q
+==
+..<i> files generated </i>..
+..
+df_1.csv
+}
+}
+
+package dataframes.data2 <<Database>> {
+class Merge{
+df2_mysql
+df_comm3
+==
+..<i> files generated </i>..
+..
+df2_mysql_q_d.csv
+ }
+}
+
+package dataframes.df_comm3 <<Database>> {
+class DfC3{
+df_comm3_mysql
+==
+..<i> files generated </i>..
+..
+df_comm3.csv
+ }
+}
+
+package dataframes.df_case <<Database>> {
+class Compare{
+df_case_csv
+df_comm3_csv_single_df
+df_case_csv_df
+it_is
+==
+..<i> files generated </i>..
+..
+df_case.csv
+df_comm3_csv_single_df
+df_case_csv_df
+ }
+}
+
+package dataframes.df_alert  <<Database>> {
+class Title{
+extract_alert_csv
+title_case
+==
+..<i> files generated </i>..
+..
+df_alert.csv
+ }
+}
+
+class Alert{
+find_alert
+val21
+}
+
+class CreateCase{
+response_create_case
+data_create_case2
+id_case_readable2
+}
+
+package dataframes.new_data  <<Database>> {
+class CreateTask{
+new_json_task2
+response_create_new_task2
+didi22
+ }
+}
+
+class Logs{
+comix22
+response_json_log_new2
+re112new
+}
+
+package dataframes.df_case <<Database>> {
+class Addition{
+df_app
+ }
+}
+
+
+Update -left-> Encry
+Update -right-> Link
+Link -right-> Extract
+Extract -down-> Fields
+Fields -right-> Merge
+Merge -right->DfC3
+DfC3 -right-> Compare
+Compare -down-> Title
+Title -right->Alert
+Alert -right-> CreateCase
+CreateCase -right-> CreateTask
+CreateTask -down-> Logs
+Logs -down->Addition 
+
+
+@enduml
