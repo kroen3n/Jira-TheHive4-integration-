@@ -109,6 +109,12 @@ df_app
  }
 }
 
+package dataframes.df_case <<Database>> {
+class Addition{
+df_app
+ }
+}
+
 
 Update -left-> Encry
 Update -right-> Link
@@ -123,6 +129,7 @@ Alert -right-> CreateCase
 CreateCase -right-> CreateTask
 CreateTask -down-> Logs
 Logs -down->Addition 
+Logs -down->AdditionLogs
 
 
 @enduml
