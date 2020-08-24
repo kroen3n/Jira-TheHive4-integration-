@@ -79,6 +79,11 @@ Alert erstellt in Hive4:
 ![alt text](https://raw.githubusercontent.com/kroen3n/Jira-TheHive4-integration-/master/deutsche_D0k/pics/create_alert.png)
 
 <br></br>
+
+II) Erster Kommentar
+
+Lassen Sie uns den ersten Kommentar in Jira hinzufügen: "Der erster Kommentar"
+
 Ausführen der Flask2-Webanwendung als Dienst (Port 5003 - Kommentare)
 
 ```
@@ -93,6 +98,30 @@ add logs to new task
 172.17.0.3 - - [04/Aug/2020 16:29:51] "POST /get/comments?user_id=artsy&user_key=JIRAUSER10000 HTTP/1.1" 201 -
 
 ```
+<br></br>
+
+Die Warnung wird nun zum Fall:
+
+![alt text](https://raw.githubusercontent.com/kroen3n/Jira-TheHive4-integration-/master/deutsche_D0k/pics/Erster_Fall_1.png)
+
+<br></br>
+... Mit einer Aufgabe namens "Jira comments":
+
+
+![alt text](https://raw.githubusercontent.com/kroen3n/Jira-TheHive4-integration-/master/deutsche_D0k/pics/Erster_Fall_2.png)
+
+
+![alt text](https://raw.githubusercontent.com/kroen3n/Jira-TheHive4-integration-/master/deutsche_D0k/pics/Erster_Fall_3.png)
+
+<br></br>
+
+Die Aufgabe wird die Jira-Kommentare enthalten
+
+![alt text](https://raw.githubusercontent.com/kroen3n/Jira-TheHive4-integration-/master/deutsche_D0k/pics/Erster_Kommentar_Hive4.png)
+
+
+
+
 
 Ausführen der Flask3-Webanwendung als Dienst (Port 5004 -- Kommentare hinzufügen)
 
