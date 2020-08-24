@@ -53,7 +53,14 @@ Der MySQL-Container kommuniziert nur auf der Ebene des Docker Netzwerks.
 (base) root@kro3nen:/home/po0lt# lsof -i :3306
 (base) root@kro3nen:/home/po0lt#
 ```
+<br></br>
+I) Jira-Ticket erstellen
 
+![alt text](https://raw.githubusercontent.com/kroen3n/Jira-TheHive4-integration-/master/deutsche_D0k/pics/Erstes_Ticket_1.png)
+
+<br></br>
+
+![alt text](https://raw.githubusercontent.com/kroen3n/Jira-TheHive4-integration-/master/deutsche_D0k/pics/Erstes_Ticket_2.png)
 
 
 
@@ -66,6 +73,12 @@ no attachment in ticket... creating alert with data...
 <Response [201]>
 ```
 
+<br></br>
+Alert erstellt in Hive4:
+
+![alt text](https://raw.githubusercontent.com/kroen3n/Jira-TheHive4-integration-/master/deutsche_D0k/pics/create_alert.png)
+
+<br></br>
 Ausführen der Flask2-Webanwendung als Dienst (Port 5003 - Kommentare)
 
 ```
