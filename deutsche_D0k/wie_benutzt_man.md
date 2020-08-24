@@ -54,7 +54,7 @@ Der MySQL-Container kommuniziert nur auf der Ebene des Docker Netzwerks.
 (base) root@kro3nen:/home/po0lt#
 ```
 <br></br>
-I) Jira-Ticket erstellen
+<b> I) Jira-Ticket erstellen </b>
 
 ![alt text](https://raw.githubusercontent.com/kroen3n/Jira-TheHive4-integration-/master/deutsche_D0k/pics/Erstes_Ticket_1.png)
 
@@ -80,7 +80,7 @@ Alert erstellt in Hive4:
 
 <br></br>
 
-II) Erster Kommentar
+<b> II) Erster Kommentar </b>
 
 Lassen Sie uns den ersten Kommentar in Jira hinzufügen: "Der erster Kommentar"
 
@@ -120,9 +120,8 @@ Die Aufgabe wird die Jira-Kommentare enthalten
 ![alt text](https://raw.githubusercontent.com/kroen3n/Jira-TheHive4-integration-/master/deutsche_D0k/pics/Erster_Kommentar_Hive4.png)
 
 
-III) Kommentare hinzufügen
+<b> III) Kommentare hinzufügen </b>
 
-<br></br>
 
 Einen weiteren Kommentar hinzufügen in Jira:
 <br></br>
@@ -158,5 +157,5 @@ case is already created
 <br></br>
 Jira Kommentar hinzugefügt in Hive4:
 
-![alt text](https://raw.githubusercontent.com/kroen3n/Jira-TheHive4-integration-/master/deutsche_D0k/pics/Der_zweite_Kommentar_Hive4.png
+![alt text](https://raw.githubusercontent.com/kroen3n/Jira-TheHive4-integration-/master/deutsche_D0k/pics/Der_zweite_Kommentar_Hive4.png)
 
