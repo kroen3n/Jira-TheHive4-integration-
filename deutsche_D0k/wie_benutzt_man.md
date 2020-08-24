@@ -120,7 +120,14 @@ Die Aufgabe wird die Jira-Kommentare enthalten
 ![alt text](https://raw.githubusercontent.com/kroen3n/Jira-TheHive4-integration-/master/deutsche_D0k/pics/Erster_Kommentar_Hive4.png)
 
 
+III) Kommentare hinzufügen
 
+<br></br>
+
+Einen weiteren Kommentar hinzufügen in Jira:
+<br></br>
+
+![alt text](https://raw.githubusercontent.com/kroen3n/Jira-TheHive4-integration-/master/deutsche_D0k/pics/Der_zweite_Kommentar_Jira.png)
 
 
 Ausführen der Flask3-Webanwendung als Dienst (Port 5004 -- Kommentare hinzufügen)
@@ -138,7 +145,7 @@ http://172.17.0.5:9000/api/case/task/42664136/log
 172.17.0.3 - - [04/Aug/2020 16:32:30] "POST /update/comments?user_id=artsy&user_key=JIRAUSER10000 HTTP/1.1" 201 -
 ```
 
-Wenn ein Kommentar unter einem bestehenden Fall hinzugefügt wird, bietet Flask2 eine Ausgabe an:
+n.b: Wenn ein Kommentar unter einem bestehenden Fall hinzugefügt wird, bietet Flask2 eine Ausgabe an:
 ```
 172.17.0.3 - - [04/Aug/2020 16:29:51] "POST /get/comments?user_id=artsy&user_key=JIRAUSER10000 HTTP/1.1" 201 -
 
@@ -147,3 +154,9 @@ Der zweite Kommentar
 case is already created
 172.17.0.3 - - [04/Aug/2020 16:32:30] "POST /get/comments?user_id=artsy&user_key=JIRAUSER10000 HTTP/1.1" 201 -
 ```
+
+<br></br>
+Jira Kommentar hinzugefügt in Hive4:
+
+![alt text](https://raw.githubusercontent.com/kroen3n/Jira-TheHive4-integration-/master/deutsche_D0k/pics/Der_zweite_Kommentar_Hive4.png
+
